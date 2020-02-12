@@ -7,18 +7,16 @@ let num1, num2;
     num1 = window.prompt("Input the first integer", 0);
     num2 = window.prompt("Input the second integer", 0);
     
-    function integer(num1,num2) {
+    // function integer(num1,num2) {
 
-        var isInteger = Number.isInteger(num1) && Number.isInteger(num2);
+        // var isInteger = Number.isInteger(num1) && Number.isInteger(num2);
     
-        if(isInteger && num1 <= num2)
-            document.write("This larger number is ");
+        if(num1 < num2)
+            document.write(num2 + " is larger.");
     
-        else if(isInteger && num1 >= num2)
-            document.write("The larger number is " + Math.max(num1,num2));
-   
-        else if(isInteger && num1 >= num2)
-            document.write("The numbers are equal " + Math.max(num1,num2));
-    }
-    
+        else if(num1 > num2)
+            document.write(num1 + " is larger.");
+        else if(num1 === num2)
+            document.write("The numbers are equal.")
+    // }
     integer(-1,-1);
