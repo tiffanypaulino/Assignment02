@@ -1,20 +1,22 @@
-var coinFlip = Math.round(Math.random()) + 1;
-var choice = prompt("Heads or Tails");
-    if (coinFlip == 1) {
+let coinFlip = Math.round(Math.random());
+let choice = prompt("Heads or tails?");
+
+if (coinFlip < 1) {
     var flipResult = "heads";
-    } else {
+} else {
     var flipResult = "tails";
-    }
-    if (flipResult == choice) {
-        if (flipResult == "heads") {
-            alert("The flip was heads and you chose heads...you win!");
-        } else {
-            alert("The flip was tails and you chose tails...you win!");
-        }
+}
+
+if (flipResult === choice) {
+    if (flipResult === "heads") {
+    alert("The flip was heads and you chose heads...You win!");
     } else {
-        if (flipResult == "heads") {
-            alert("The flip was heads and you chose tails...you lose!");
-        } else {
-            alert("The flip was tails and you chose heads...you lose!");
-        }
+    alert("The flip was heads but you chose tails...You lose.");
     }
+} else {
+    if (flipResult == "tails") {
+    alert("The flip was tails but you chose heads...You lose.");
+    } else {
+    alert("The flip was tails and you chose tails...You win!");
+    }
+}
